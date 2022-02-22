@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{88172562-E6D1-48D3-86FE-F96945029FA0}</ProjectGuid>
+    <ProjectGuid>{42D99A39-1F90-4614-9664-959B831B8ECD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_16._3_AccesModifiers_Public_</RootNamespace>
-    <AssemblyName>16.3-AccesModifiers%28Public%29</AssemblyName>
+    <RootNamespace>_17._5_Constructors_Static_Class_</RootNamespace>
+    <AssemblyName>17.5-Constructors%28Static Class%29</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\ConsoleApp1.csproj">
-      <Project>{fad1aed1-1ba6-4c45-9052-0bc205de057b}</Project>
-      <Name>ConsoleApp1</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
