@@ -110,6 +110,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.4-Constructors", "17.4-C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.5-Constructors(Static Class)", "17.5-Constructors(Static Class)\17.5-Constructors(Static Class).csproj", "{42D99A39-1F90-4614-9664-959B831B8ECD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18-ReferenceAndValueType", "18-ReferenceAndValueType\18-ReferenceAndValueType.csproj", "{518D4B30-6D4D-41ED-8C79-B85338A16AEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -320,6 +322,10 @@ Global
 		{42D99A39-1F90-4614-9664-959B831B8ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42D99A39-1F90-4614-9664-959B831B8ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42D99A39-1F90-4614-9664-959B831B8ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518D4B30-6D4D-41ED-8C79-B85338A16AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518D4B30-6D4D-41ED-8C79-B85338A16AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518D4B30-6D4D-41ED-8C79-B85338A16AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518D4B30-6D4D-41ED-8C79-B85338A16AEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
