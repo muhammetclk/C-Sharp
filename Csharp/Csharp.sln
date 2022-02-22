@@ -90,6 +90,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.2-Inheritance(Virtual Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14-AbstractClass", "14-AbstractClass\14-AbstractClass.csproj", "{E95B3F43-EF91-4128-8457-63E552FEEF66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15-Recap4", "15-Recap4\15-Recap4.csproj", "{5FF29940-CDD0-4AE5-A02E-2A535C8954DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -260,6 +262,10 @@ Global
 		{E95B3F43-EF91-4128-8457-63E552FEEF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E95B3F43-EF91-4128-8457-63E552FEEF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E95B3F43-EF91-4128-8457-63E552FEEF66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF29940-CDD0-4AE5-A02E-2A535C8954DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF29940-CDD0-4AE5-A02E-2A535C8954DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF29940-CDD0-4AE5-A02E-2A535C8954DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF29940-CDD0-4AE5-A02E-2A535C8954DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
