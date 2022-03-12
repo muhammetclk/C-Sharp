@@ -112,6 +112,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.5-Constructors(Static Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18-ReferenceAndValueType", "18-ReferenceAndValueType\18-ReferenceAndValueType.csproj", "{518D4B30-6D4D-41ED-8C79-B85338A16AEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.1-Collections(ArrayList)", "19.1-Collections(ArrayList)\19.1-Collections(ArrayList).csproj", "{25AA9CCB-E396-4D41-8200-5067DCFDC9B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -326,6 +328,10 @@ Global
 		{518D4B30-6D4D-41ED-8C79-B85338A16AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{518D4B30-6D4D-41ED-8C79-B85338A16AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{518D4B30-6D4D-41ED-8C79-B85338A16AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25AA9CCB-E396-4D41-8200-5067DCFDC9B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25AA9CCB-E396-4D41-8200-5067DCFDC9B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25AA9CCB-E396-4D41-8200-5067DCFDC9B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25AA9CCB-E396-4D41-8200-5067DCFDC9B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
