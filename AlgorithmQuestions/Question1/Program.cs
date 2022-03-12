@@ -15,7 +15,7 @@ namespace Question1
               Kullanıcının girmiş olduğu sayılardan çift olanlar console'a yazdırın.*/
             Console.Write("Pozitif bir sayi girin:");
             int Number = Convert.ToInt32(Console.ReadLine());
-
+            
 
 
 
