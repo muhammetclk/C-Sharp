@@ -120,6 +120,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.3-Collections(List)", "1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.4-Collections(Dictionary)", "19.4-Collections(Dictionary)\19.4-Collections(Dictionary).csproj", "{10A6547F-AB74-42AC-87E9-501C7B644F17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20.1-Exceptions", "20.1-Exceptions\20.1-Exceptions.csproj", "{D7D07388-0D1E-4403-A1A7-6029508F9887}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -350,6 +352,10 @@ Global
 		{10A6547F-AB74-42AC-87E9-501C7B644F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10A6547F-AB74-42AC-87E9-501C7B644F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10A6547F-AB74-42AC-87E9-501C7B644F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D07388-0D1E-4403-A1A7-6029508F9887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D07388-0D1E-4403-A1A7-6029508F9887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D07388-0D1E-4403-A1A7-6029508F9887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D07388-0D1E-4403-A1A7-6029508F9887}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
