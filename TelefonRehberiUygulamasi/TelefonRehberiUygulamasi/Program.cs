@@ -33,6 +33,10 @@ namespace TelefonRehberiUygulamasi
                 case "2":
                     NumberDelete numberDelete = new NumberDelete(humans);
                     break;
+                case "3":
+                    NumberUpdate numberUpdate = new NumberUpdate(humans);
+                    break;
+
 
 
 
@@ -41,6 +45,7 @@ namespace TelefonRehberiUygulamasi
             Console.ReadLine();
         }
     }
+
     class Human
     {
 
@@ -62,7 +67,7 @@ namespace TelefonRehberiUygulamasi
         }
     }
     class NumberDelete : Human
-    {        
+    {
         public NumberDelete(List<Human> humans)
         {
             while (true)
@@ -87,14 +92,14 @@ namespace TelefonRehberiUygulamasi
                 }
                 if (IsThere)
                 {
-                    Console.WriteLine(humans[count].FirstName +" "+ humans[count].LastName + " isimli kisi rehberden silinmek uzere onayliyormusunuz? (y/n)");
+                    Console.WriteLine(humans[count].FirstName + " " + humans[count].LastName + " isimli kisi rehberden silinmek uzere onayliyormusunuz? (y/n)");
                     Console.WriteLine("1-Yes\n" + "2-No");
                     Console.Write("Islem:");
                     int Confirmation = Convert.ToInt32(Console.ReadLine());
                     if (Confirmation == 1)
                     {
                         humans.Remove(humans[count]);
-                        Console.WriteLine( "Siliniyor...");
+                        Console.WriteLine("Siliniyor...");
                         break;
                     }
                     else
@@ -112,9 +117,57 @@ namespace TelefonRehberiUygulamasi
                     {
                         Console.WriteLine("Cikiliyor...");
                         break;
-                    }   
+                    }
                 }
             }
+        }
+    }
+    class NumberUpdate : Human
+    {
+        public NumberUpdate(List<Human> humans)
+        {
+            while (true)
+            {
+                Console.WriteLine("Lutfen Numarasini guncellemek istediginiz kisinin adini ya da soyadini giriniz:");
+                Console.Write("NameOrSurname:");
+                string NameOrSurname = Console.ReadLine();
+                bool IsThere = true;
+                int count = 0;
+                foreach (var human in humans)
+                {
+                    if (NameOrSurname == human.FirstName || NameOrSurname == human.LastName)
+                    {
+                        IsThere = true;
+                        break;
+                    }
+                    else
+                    {
+                        IsThere = false;
+                        count++;
+                    }
+                }
+                if (IsThere)
+                {
+                    Console.WriteLine(humans[count].FirstName + " " + humans[count].LastName + " isimli kisi bulundu");                    
+                    Console.Write("Yeni Numarayi giriniz:");
+                    humans[count].TelNumber = Convert.ToInt64(Console.ReadLine());
+                    Console.WriteLine("Guncelleniyor...");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Aradiginiz kriterlere uygun veri rehberde bulunamadi.Lutfen bir secim yapiniz.");
+                    Console.WriteLine("Guncellemeyi sonlandirmak icin:(1)\n" + "Yeniden denemek icin:(2)");
+                    Console.Write("islem:");
+                    int result = Convert.ToInt32(Console.ReadLine());
+                    if (result == 1)
+                    {
+                        Console.WriteLine("Cikiliyor...");
+                        break;
+                    }
+                }
+            }
+
         }
     }
 
