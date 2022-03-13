@@ -36,6 +36,9 @@ namespace TelefonRehberiUygulamasi
                 case "3":
                     NumberUpdate numberUpdate = new NumberUpdate(humans);
                     break;
+                case "4":
+                    TelDirectory telDirectory = new TelDirectory(humans);
+                    break;
 
 
 
@@ -170,5 +173,17 @@ namespace TelefonRehberiUygulamasi
 
         }
     }
-
+    class TelDirectory : Human
+    {
+        public TelDirectory(List<Human> humans)
+        {
+            Console.WriteLine("Telefon Rehberi");
+            foreach (var human in humans)
+            {
+                Console.WriteLine("FirstName:"+human.FirstName);
+                Console.WriteLine("LastName:"+human.LastName);
+                Console.WriteLine("TelNumber:"+human.TelNumber);
+            }
+        }
+    }
 }
