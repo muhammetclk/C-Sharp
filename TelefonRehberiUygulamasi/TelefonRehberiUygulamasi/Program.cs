@@ -11,13 +11,13 @@ namespace TelefonRehberiUygulamasi
     {
         static void Main(string[] args)
         {
-            List<Human> humen = new List<Human> {
-                new Human() { FistName = "Burak", LastName = "Yilmaz", TelNumber = 12345678900 },
-                new Human() { FistName = "Emre", LastName = "Belozoglu", TelNumber = 12345678911 },
-                new Human() { FistName = "Hakan", LastName = "Calhanoglu", TelNumber = 12345678922 },
-                new Human() { FistName = "Mesut", LastName = "Ozil", TelNumber = 12345678933 },
-                new Human() { FistName = "Ferdi", LastName = "Kadioglu", TelNumber = 12345678944 }
-                
+            List<Human> humans = new List<Human> {
+                new Human() { FirstName = "Burak", LastName = "Yilmaz", TelNumber = 12345678900 },
+                new Human() { FirstName = "Emre", LastName = "Belozoglu", TelNumber = 12345678911 },
+                new Human() { FirstName = "Hakan", LastName = "Calhanoglu", TelNumber = 12345678922 },
+                new Human() { FirstName = "Mesut", LastName = "Ozil", TelNumber = 12345678933 },
+                new Human() { FirstName = "Ferdi", LastName = "Kadioglu", TelNumber = 12345678944 }
+
             };
 
             Console.WriteLine("Lutfen Yapmak istediginiz islemi seciniz:\n" + "1-Yeni Numara Kaydetmek\n" +
@@ -28,55 +28,10 @@ namespace TelefonRehberiUygulamasi
             {
                 case "1":
                     NumberSave numberSave = new NumberSave();
-                    humen.Add(numberSave);
+                    humans.Add(numberSave);
                     break;
                 case "2":
-                    while (true)
-                    {
-                        NumberDelete numberDelete = new NumberDelete(humen);
-                        bool result = true;
-                        int count = 0;
-
-                        foreach (var item in humen)
-                        {
-                            if (item.FistName == numberDelete.nameorsurname || item.LastName == numberDelete.nameorsurname)
-                            {
-
-                                break;
-                            }
-                            else
-                            {
-                                result = false;
-                                count++;
-                                continue;
-                            }
-
-                        }
-                        if (result)
-                        {
-                            Console.WriteLine(humen[count].FistName + humen[count].LastName + " isimli kisi rehberden silinmek uzere, onayliyor musunuz?" +
-                                "1-Yes\n" + "2=No");
-                            string result2 = Console.ReadLine();
-                            if (result2 == "1")
-                            {
-                                humen.Remove(humen[count]);
-                                break;
-                            }
-                            else
-                                break;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Aradaginiz kriterlere uygun veri bulunamadi.Lutfen bir secim yapiniz:" + "Silmeyi sonlandirmak icin:(1)" +
-                                "Yeniden denemek icin:(2)");
-                            string result3 = Console.ReadLine();
-                            if (result3 == "1")
-                                break;
-
-                        }
-                    }
-
-
+                    NumberDelete numberDelete = new NumberDelete(humans);
                     break;
 
 
@@ -88,8 +43,8 @@ namespace TelefonRehberiUygulamasi
     }
     class Human
     {
-        
-        public string FistName { get; set; }
+
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public long TelNumber { get; set; }
 
@@ -99,7 +54,7 @@ namespace TelefonRehberiUygulamasi
         public NumberSave()
         {
             Console.Write("Lutfen isim giriniz:");
-            FistName = Console.ReadLine();
+            FirstName = Console.ReadLine();
             Console.Write("Lutfen soyisim giriniz:");
             LastName = Console.ReadLine();
             Console.Write("Lutfen Telefon mumarasini giriniz:");
@@ -108,13 +63,67 @@ namespace TelefonRehberiUygulamasi
     }
     class NumberDelete : Human
     {
-        public string nameorsurname;
-        public NumberDelete(List<Human> humen)
+        public string NameOrSurname;
+        public NumberDelete(List<Human> humans)
         {
-            Console.WriteLine("Lutfen numarasini Silmek istediginiz kisinin adini veya soyadini giriniz:");
-            nameorsurname = Console.ReadLine();
+            while (true)
+            {
+                Console.WriteLine("Lutfen numarasini Silmek istediginiz kisinin adini veya soyadini giriniz:");
+                Console.Write("NameOrSurname:");
+                NameOrSurname = Console.ReadLine();
+                bool IsThere = true;
+                int count = 0;
+                foreach (var human in humans)
+                {
+                    if (NameOrSurname == human.FirstName || NameOrSurname == human.LastName)
+                    {
+                        IsThere = true;
+                        break;
+                    }
+                    else
+                    {
+                        IsThere = false;
+                        count++;
 
+                    }
+                }
+                if (IsThere)
+                {
+                    Console.WriteLine(humans[count].FirstName +" "+ humans[count].LastName + " isimli kisi rehberden silinmek uzere onayliyormusunuz? (y/n)");
+                    Console.WriteLine("1-Yes\n" + "2-No");
+                    Console.Write("Islem:");
+                    int Confirmation = Convert.ToInt32(Console.ReadLine());
+                    if (Confirmation == 1)
+                    {
+                        humans.Remove(humans[count]);
+                        Console.WriteLine( "Siliniyor...");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cikiliyor...");
+                        break;
+
+                    }
+                        
+
+                }
+                else
+                {
+                    Console.WriteLine("Aradaginiz kriterlere uygun veri bulunamadi.Lutfen bir secim yapiniz:" + "Silmeyi sonlandirmak icin:(1)" +
+                                "Yeniden denemek icin:(2)");
+                    int result = Convert.ToInt32(Console.ReadLine());
+                    if (result == 1)
+                    {
+                        Console.WriteLine("Cikiliyor...");
+                        break;
+
+                    }
+                        
+                }
+
+            }
         }
     }
-    
+
 }
