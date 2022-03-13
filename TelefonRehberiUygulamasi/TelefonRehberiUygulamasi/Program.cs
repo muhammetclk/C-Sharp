@@ -62,15 +62,14 @@ namespace TelefonRehberiUygulamasi
         }
     }
     class NumberDelete : Human
-    {
-        public string NameOrSurname;
+    {        
         public NumberDelete(List<Human> humans)
         {
             while (true)
             {
                 Console.WriteLine("Lutfen numarasini Silmek istediginiz kisinin adini veya soyadini giriniz:");
                 Console.Write("NameOrSurname:");
-                NameOrSurname = Console.ReadLine();
+                string NameOrSurname = Console.ReadLine();
                 bool IsThere = true;
                 int count = 0;
                 foreach (var human in humans)
@@ -84,7 +83,6 @@ namespace TelefonRehberiUygulamasi
                     {
                         IsThere = false;
                         count++;
-
                     }
                 }
                 if (IsThere)
@@ -103,10 +101,7 @@ namespace TelefonRehberiUygulamasi
                     {
                         Console.WriteLine("Cikiliyor...");
                         break;
-
                     }
-                        
-
                 }
                 else
                 {
@@ -117,11 +112,8 @@ namespace TelefonRehberiUygulamasi
                     {
                         Console.WriteLine("Cikiliyor...");
                         break;
-
-                    }
-                        
+                    }   
                 }
-
             }
         }
     }
