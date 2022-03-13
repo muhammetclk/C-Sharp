@@ -39,7 +39,9 @@ namespace TelefonRehberiUygulamasi
                 case "4":
                     TelDirectory telDirectory = new TelDirectory(humans);
                     break;
-
+                case "5":
+                    TelDirectorySearch telDirectorySearch = new TelDirectorySearch(humans);
+                    break;
 
 
 
@@ -151,7 +153,7 @@ namespace TelefonRehberiUygulamasi
                 }
                 if (IsThere)
                 {
-                    Console.WriteLine(humans[count].FirstName + " " + humans[count].LastName + " isimli kisi bulundu");                    
+                    Console.WriteLine(humans[count].FirstName + " " + humans[count].LastName + " isimli kisi bulundu");
                     Console.Write("Yeni Numarayi giriniz:");
                     humans[count].TelNumber = Convert.ToInt64(Console.ReadLine());
                     Console.WriteLine("Guncelleniyor...");
@@ -180,9 +182,24 @@ namespace TelefonRehberiUygulamasi
             Console.WriteLine("Telefon Rehberi");
             foreach (var human in humans)
             {
-                Console.WriteLine("FirstName:"+human.FirstName);
-                Console.WriteLine("LastName:"+human.LastName);
-                Console.WriteLine("TelNumber:"+human.TelNumber);
+                Console.WriteLine("FirstName:" + human.FirstName);
+                Console.WriteLine("LastName:" + human.LastName);
+                Console.WriteLine("TelNumber:" + human.TelNumber);
+            }
+        }
+    }
+    class TelDirectorySearch : Human
+    {
+        public TelDirectorySearch(List<Human> humans)
+        {
+            Console.WriteLine("Arama yapmak istediginiz tipi seciniz:");
+            Console.WriteLine("Isim ve soyisime gore arama yapmak icin :(1)");
+            Console.WriteLine("Telefon numarasina gore arama yapmak icin:(2)");
+            Console.WriteLine("Islem:");
+            int result = Convert.ToInt32(Console.ReadLine());
+            if (result == 1)
+            {
+
             }
         }
     }
