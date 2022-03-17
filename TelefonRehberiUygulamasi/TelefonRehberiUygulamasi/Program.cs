@@ -27,7 +27,7 @@ namespace TelefonRehberiUygulamasi
             switch (Islem)
             {
                 case "1":
-                    NumberSave numberSave = new NumberSave();
+                    NumberSave numberSave = new NumberSave(humans);
                     humans.Add(numberSave);
                     break;
                 case "2":
@@ -61,7 +61,7 @@ namespace TelefonRehberiUygulamasi
     }
     class NumberSave : Human
     {
-        public NumberSave()
+        public NumberSave(List<Human> humans)
         {
             Console.Write("Lutfen isim giriniz:");
             FirstName = Console.ReadLine();
@@ -69,6 +69,7 @@ namespace TelefonRehberiUygulamasi
             LastName = Console.ReadLine();
             Console.Write("Lutfen Telefon mumarasini giriniz:");
             TelNumber = Convert.ToInt64(Console.ReadLine());
+
         }
     }
     class NumberDelete : Human
@@ -193,13 +194,47 @@ namespace TelefonRehberiUygulamasi
         public TelDirectorySearch(List<Human> humans)
         {
             Console.WriteLine("Arama yapmak istediginiz tipi seciniz:");
-            Console.WriteLine("Isim ve soyisime gore arama yapmak icin :(1)");
+            Console.WriteLine("Isim veya soyisime gore arama yapmak icin:(1)");
             Console.WriteLine("Telefon numarasina gore arama yapmak icin:(2)");
-            Console.WriteLine("Islem:");
+            Console.Write("Islem:");
             int result = Convert.ToInt32(Console.ReadLine());
             if (result == 1)
             {
-
+                Console.Write("NameOrSurname:");
+                string NameOrSurname = Console.ReadLine();
+                int count = 0;
+                foreach (var human in humans)
+                {
+                    if (NameOrSurname == human.FirstName || NameOrSurname == human.LastName)
+                    {
+                        for (;count<humans.Count;count++)
+                        {
+                            Console.WriteLine("FirstName: " + humans[count].FirstName + "\nLastName:" + humans[count].LastName + "\nTelNumber:" + humans[count].TelNumber);   
+                        }
+                        break;
+                    }
+                    else
+                        count++;                        
+                }
+            }
+            else if (result == 2)
+            {
+                Console.Write("TelNumber:");
+                long _TelNumber = Convert.ToInt64(Console.ReadLine());
+                int count = 0;
+                foreach (var human in humans)
+                {
+                    if(human.TelNumber==_TelNumber)
+                    {
+                        for (; count < humans.Count; count++)
+                        {
+                            Console.WriteLine("FirstName: " + humans[count].FirstName + "\nLastName:" + humans[count].LastName + "\nTelNumber:" + humans[count].TelNumber);
+                        }
+                        break;
+                    }
+                    else
+                        count++;
+                }
             }
         }
     }
