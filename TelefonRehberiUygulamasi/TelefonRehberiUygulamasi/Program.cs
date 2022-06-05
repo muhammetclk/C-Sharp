@@ -67,7 +67,7 @@ namespace TelefonRehberiUygulamasi
             FirstName = Console.ReadLine();
             Console.Write("Lutfen soyisim giriniz:");
             LastName = Console.ReadLine();
-            Console.Write("Lutfen Telefon mumarasini giriniz:");
+            Console.Write("Lutfen Telefon numarasini giriniz:");
             TelNumber = Convert.ToInt64(Console.ReadLine());
 
         }
@@ -85,7 +85,7 @@ namespace TelefonRehberiUygulamasi
                 int count = 0;
                 foreach (var human in humans)
                 {
-                    if (NameOrSurname == human.FirstName || NameOrSurname == human.LastName)
+                    if (NameOrSurname.ToLower() == human.FirstName.ToLower() || NameOrSurname.ToLower() == human.LastName.ToLower())
                     {
                         IsThere = true;
                         break;
@@ -141,7 +141,7 @@ namespace TelefonRehberiUygulamasi
                 int count = 0;
                 foreach (var human in humans)
                 {
-                    if (NameOrSurname == human.FirstName || NameOrSurname == human.LastName)
+                    if (NameOrSurname.ToLower() == human.FirstName.ToLower() || NameOrSurname.ToLower() == human.LastName.ToLower())
                     {
                         IsThere = true;
                         break;
@@ -181,8 +181,10 @@ namespace TelefonRehberiUygulamasi
         public TelDirectory(List<Human> humans)
         {
             Console.WriteLine("Telefon Rehberi");
+            humans.OrderBy(a => a).ToArray();
             foreach (var human in humans)
             {
+                
                 Console.WriteLine("FirstName:" + human.FirstName);
                 Console.WriteLine("LastName:" + human.LastName);
                 Console.WriteLine("TelNumber:" + human.TelNumber);
@@ -205,7 +207,7 @@ namespace TelefonRehberiUygulamasi
                 int count = 0;
                 foreach (var human in humans)
                 {
-                    if (NameOrSurname == human.FirstName || NameOrSurname == human.LastName)
+                    if (NameOrSurname.ToLower() == human.FirstName.ToLower() || NameOrSurname.ToLower() == human.LastName.ToLower())
                     {
                         for (;count<humans.Count;count++)
                         {
