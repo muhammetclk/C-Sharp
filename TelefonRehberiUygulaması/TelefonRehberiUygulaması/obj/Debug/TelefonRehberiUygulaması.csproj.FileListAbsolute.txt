@@ -1,7 +1,0 @@
-C:\Users\FIRAT\Desktop\Muhammet\repo\TelefonRehberiUygulaması\TelefonRehberiUygulaması\bin\Debug\TelefonRehberiUygulaması.exe.config
-C:\Users\FIRAT\Desktop\Muhammet\repo\TelefonRehberiUygulaması\TelefonRehberiUygulaması\bin\Debug\TelefonRehberiUygulaması.exe
-C:\Users\FIRAT\Desktop\Muhammet\repo\TelefonRehberiUygulaması\TelefonRehberiUygulaması\bin\Debug\TelefonRehberiUygulaması.pdb
-C:\Users\FIRAT\Desktop\Muhammet\repo\TelefonRehberiUygulaması\TelefonRehberiUygulaması\obj\Debug\TelefonRehberiUygulaması.csprojAssemblyReference.cache
-C:\Users\FIRAT\Desktop\Muhammet\repo\TelefonRehberiUygulaması\TelefonRehberiUygulaması\obj\Debug\TelefonRehberiUygulaması.csproj.CoreCompileInputs.cache
-C:\Users\FIRAT\Desktop\Muhammet\repo\TelefonRehberiUygulaması\TelefonRehberiUygulaması\obj\Debug\TelefonRehberiUygulaması.exe
-C:\Users\FIRAT\Desktop\Muhammet\repo\TelefonRehberiUygulaması\TelefonRehberiUygulaması\obj\Debug\TelefonRehberiUygulaması.pdb
